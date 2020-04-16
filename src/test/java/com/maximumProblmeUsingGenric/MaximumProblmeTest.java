@@ -7,6 +7,7 @@ public class MaximumProblmeTest
 {
     MaximumProblme maximumProblme=new MaximumProblme();
     /*Test case for Max Number At First Poistion For Integer*/
+
     @Test
     public void givenIntegerMaxNumber_WhenAtFirstPoistion_ShouldReturnSameNumber()
     {
@@ -24,6 +25,7 @@ public class MaximumProblmeTest
     {
         Assert.assertSame(50,maximumProblme.findMaximumNumber(20,30,50));
     }
+
     /*Test case for Max Number At First Poistion For Float*/
     @Test
     public void givenFloatMaxNumber_WhenAtFirstPoistion_ShouldReturnSameNumber()
@@ -46,5 +48,23 @@ public class MaximumProblmeTest
         Assert.assertEquals(Float.valueOf(50.4f),Result);
     }
 
+    /*Test case for Max Number At First Poistion For String*/
+    @Test
+    public void givenStringMaxString_WhenAtFirstPoistion_ShouldReturnSameString()
+    {
+        Assert.assertSame("xyz",maximumProblme.findMaximumString("xyz","mno","abc"));
+    }
+    /*Test case for Max Number At Second Poistion For String*/
+    @Test
+    public void givenStringMaxString_WhenAtSecondPoistion_ShouldReturnSameString()
+    {
+        Assert.assertSame("xyz",maximumProblme.findMaximumString("mno","xyz","abc"));
+    }
+    /*Test case for Max Number At Second Poistion For String*/
+    @Test
+    public void givenStringMaxString_WhenAtThirdPoistion_ShouldReturnSameString()
+    {
+        Assert.assertSame("xyz",maximumProblme.findMaximumString("abc","mno","xyz"));
+    }
 
 }
