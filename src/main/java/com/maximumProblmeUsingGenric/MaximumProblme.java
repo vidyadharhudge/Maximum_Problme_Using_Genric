@@ -1,51 +1,23 @@
 package com.maximumProblmeUsingGenric;
 
-public class MaximumProblme
+public class MaximumProblme<T extends Comparable<T>>
 {
-    /* Methode For findMaxNumber And Passing Parameter For Integer*/
-    public Integer findMaximumNumber(Integer firstNumber,Integer secondNumber,Integer thirdNumber)
+
+    public T findMaximum(T data1, T data2, T data3)
     {
-        Integer maximumValue=firstNumber;
+        T maximumValue=data1;
         /* Using CompareTo For Maximum Number */
-        if (maximumValue.compareTo(secondNumber)<0)
+        if (maximumValue.compareTo(data2)<0)
         {
-            maximumValue=secondNumber;
+            maximumValue=data2;
         }
-        if (maximumValue.compareTo(thirdNumber)<0)
+        if (maximumValue.compareTo(data3)<0)
         {
-            maximumValue=thirdNumber;
-        }
-        return maximumValue;
-    }
-    /* Methode For findMaxNumber And Passing Parameter For Float*/
-    public Float findMaximumNumber(Float firstNumber,Float secondNumber,Float thirdNumber)
-    {
-        Float maximumValue=firstNumber;
-        /* Using CompareTo For Maximum Number */
-        if (maximumValue.compareTo(secondNumber)<0)
-        {
-            maximumValue=secondNumber;
-        }
-        if (maximumValue.compareTo(thirdNumber)<0)
-        {
-            maximumValue=thirdNumber;
+            maximumValue=data3;
         }
         return maximumValue;
+
     }
-    /* Methode For findMaxString And Passing Parameter For String*/
-    public String findMaximumString(String firstString,String secondString,String thirdString)
-    {
-        String maximumValue=firstString;
-        /* Using CompareTo For Maximum String */
-        if (maximumValue.compareTo(secondString)<0)
-        {
-            maximumValue=secondString;
-        }
-        if (maximumValue.compareTo(thirdString)<0)
-        {
-            maximumValue=thirdString;
-        }
-        return maximumValue;
-    }
+
 
 }
