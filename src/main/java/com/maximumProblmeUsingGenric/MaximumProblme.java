@@ -1,4 +1,6 @@
 package com.maximumProblmeUsingGenric;
+import java.util.Arrays;
+import java.util.Collections;
 
 public class MaximumProblme<T extends Comparable<T>>
 {
@@ -15,7 +17,7 @@ public class MaximumProblme<T extends Comparable<T>>
         output=findMaximum(data1, data2, data3);
     }
     /* Print The Maximum Value Among Three Value */
-    public T findMaximum(T data1, T data2, T data3)
+    public static <T extends Comparable<T>> T findMaximum(T data1, T data2, T data3, T... optionalArguments)
     {
         T maximumValue=data1;
         /* Using CompareTo For Maximum Among Two Number */
@@ -27,16 +29,21 @@ public class MaximumProblme<T extends Comparable<T>>
         {
             maximumValue=data3;
         }
+        /* Sorting Logic */
+        if (optionalArguments.length!=0)
+        {
+            Arrays.sort(optionalArguments);
+            if (maximumValue.compareTo(optionalArguments[0])<0)
+            {
+                maximumValue=optionalArguments[0];
+            }
+        }
         printMaximum(maximumValue);
         return maximumValue;
-
     }
     /* Print The Maximum Value Of Integer,Float,String */
-    public T printMaximum(T maximumValue)
+    public static<T extends Comparable<T>> void printMaximum(T maximumValue)
     {
         System.out.println("Maximum value is : " +maximumValue);
-        return maximumValue;
     }
-
-
 }
