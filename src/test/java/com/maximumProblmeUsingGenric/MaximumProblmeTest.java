@@ -7,7 +7,7 @@ public class MaximumProblmeTest
 {
    /* Testing Integer Value For Maximum */
     @Test
-    public void maxTestForInteger()
+    public void maximumTestForInteger()
     {
         Integer expected = 50;
         MaximumProblme<Integer> maximumInteger = new MaximumProblme<Integer>(20, 50, 30);
@@ -16,7 +16,7 @@ public class MaximumProblmeTest
     }
     /* Testing Float Value For Maximum */
     @Test
-    public void maxTestForFloat()
+    public void maximumTestForFloat()
     {
         Float expected = 50.4f;
         MaximumProblme<Float> maximumFloat = new MaximumProblme<Float>(50.4f,20.6f,30.8f);
@@ -25,7 +25,7 @@ public class MaximumProblmeTest
     }
     /* Testing String and find For Maximum String */
       @Test
-    public void maxTestForString()
+    public void maximumTestForString()
     {
         String expected = "xyz";
         MaximumProblme<String>maximumString = new MaximumProblme<String>("abc","mno","xyz");
